@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome back ##firstname##!</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <script src="http://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <style>
+            body { background-color: black; color: white; }
+            #cashBtn { width: 90%; max-width: 251px; }
+            #chips { width: 100%; margin-top: 20%; }
+            #logo { margin: 5%; }
+            h1 { font-size: 360%; }
+            p { font-size: 260%; }
+            form { text-align: left; margin: 12% 0 0 0; }
+            .col-sm-8 { padding: 5%; }
+            .col-sm-4 { padding-top: 10%; text-align: center; }
+            .buttons { display: inline-block; width: 70%; }
+            .buttons button { width: 100%; margin: 3% 0; }
+            .col-right { text-align: center; }
+            .row { margin: 5%; }
+            .submit-btn { width: 70%; margin: auto; }
+            .submit-btn button { width: 100%; }
+
+            @media (max-width: 1024px) {
+                h1 { font-size: 18pt; }
+                p { font-size: 16pt; }
+            }
+            
+            @media (max-width: 800px) {
+                h1 { font-size: 14pt; }
+                p { font-size: 12pt; }
+                .logo { text-align: center; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-7">
+                    ##welcomeBack##
+
+                    <div class="logo">
+                        <img id="logo" src="http://s3.amazonaws.com/loadthedice.com/images/apcLogo.png" alt="apc-logo" />
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-5 col-right">
+                    ##survey2##
+                    ##downloads##
+
+                    <img id="chips" src="http://s3.amazonaws.com/loadthedice.com/images/welcomeBackBackground.png" alt="pokerChips" />
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        if(screen.width > 1024){
+            document.getElementsByTagName('h1')[0].style.fontSize = innerHeight * 0.055 + 'px';
+            document.getElementsByTagName('p')[0].style.fontSize = innerHeight * 0.035 + 'px';
+        }
+        
+        $('document').ready(function(){
+            $('#tp3-article').click(function(){
+                location.href = "article.html";
+            });
+            
+            $('#tp3-caseStudy').click(function(){
+                location.href = "casestudy.html";
+            });
+            
+            $('#tp4-article').click(function(){
+                var attr = $('#tp4-article').attr('class')
+                if(attr.search('disabled') != -1){
+                    return;
+                }
+                else {
+                    location.href = "article_tp4.html";
+                }
+            });
+        });
+    </script>
+</html>
+
+
+
+
+
+
+
+
