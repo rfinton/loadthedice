@@ -5,22 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/loadthedice.com/js/bootstrap-3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/loadthedice.com/css/global.css">
-    <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/loadthedice.com/css/dice.css">
-    <!--[if IE 8]>
-      <style>
-        body {
-            background: black url('https://s3.amazonaws.com/loadthedice.com/images/bg.gif');
-            background-size: auto 100%;
-            background-position: top left;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        .diceContainer {
-            visibility: hidden;
-        }
-      </style>
-    <![endif]-->
+    <style>
+      @keyframes flipback {
+        0% { transform: perspective(600px) rotateY(0deg); }
+        100% { transform: perspective(600px) rotateY(180deg); }
+      }
+      
+      @keyframes flipfront {
+        0% { transform: perspective(600px) rotateY(-180deg); }
+        100% { transform: perspective(600px) rotateY(0deg); }
+      }
+      
+      .card-container {
+        padding: 0 5%;
+      }
+      
+      .card {
+        width: 18%;
+        display: inline-block;
+        position: relative;
+      }
+      
+      .card img {
+        width: 100%;
+        position: absolute;
+      }
+      
+      .front {
+        transform: perspective(600px) rotateY(-180deg);
+        backface-visibility: hidden;
+        animation-name: flipfront;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+      }
+      
+      .back {
+        backface-visibility: hidden;
+        animation-name: flipback;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+      }
+      
+      #p2 {
+        margin-top: 23%;
+      }
+    </style>
     <script data-main="https://s3.amazonaws.com/loadthedice.com/js/main" type="text/javascript" src="https://s3.amazonaws.com/loadthedice.com/js/require-2.1.22.min.js"></script>
   </head>
   <body>
@@ -29,47 +62,31 @@
         <div class="col-sm-8 col-xs-12">
           <div class="leftcol">
             <p>Ray,<br>Did you know that 57% of Donors attained each year will not give again? Find out how to use advanced personalization, crosschannel integration and data optimization techniques to improve retention.</p>
-            <div class="diceContainer">
-              <div class="dice1">
-                <div class="face front">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="1" style="margin-left:0px">
-                </div>
-                <div class="face back">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="2" style="margin-left:-125px">
-                </div>
-                <div class="face right">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="3" style="margin-left:-250px">
-                </div>
-                <div class="face left">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="4" style="margin-left:-375px">
-                </div>
-                <div class="face top">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="5" style="margin-left:-500px">
-                </div>
-                <div class="face bottom">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="6" style="margin-left:-625px">
-                </div>
+            
+            <div class="card-container">
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AC.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
 
-              <div class="dice2">
-                <div class="face front">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="1" style="margin-left:0px">
-                </div>
-                <div class="face back">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="2" style="margin-left:-125px">
-                </div>
-                <div class="face right">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="3" style="margin-left:-250px">
-                </div>
-                <div class="face left">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="4" style="margin-left:-375px">
-                </div>
-                <div class="face top">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="5" style="margin-left:-500px">
-                </div>
-                <div class="face bottom">
-                  <img src="https://s3.amazonaws.com/loadthedice.com/images/Dice.png" alt="6" style="margin-left:-625px">
-                </div>
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AH.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+              </div>
+
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AD.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+              </div>
+
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/KC.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+              </div>
+
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/KH.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
             </div>
 
@@ -91,7 +108,7 @@
             </div>
 
             <div class="form-group submit">
-              <input id="submitBtn" type="submit" value="Load the Dice">
+              <input id="submitBtn" type="submit" value="Play Your Hand">
             </div>
           </form>
         </div>
@@ -101,5 +118,24 @@
         </div>
       </div>
     </div>
-  <!-- v1.0.20160808.3 (DB: 20120713.3) Copyright (c) 2010-2011 MindFireInc [mindfireinc.com]. All rights reserved. --></body>
+    
+    <script>
+      window.addEventListener("load", function() {
+        backs = document.querySelectorAll(".back");
+        fronts = document.querySelectorAll(".front");
+        
+        setTimeout(function() {
+          requestAnimationFrame(function() {
+            for(var i = 0; i < backs.length; ++i) {
+              backs[i].style.animationPlayState = "running";
+            }
+            
+            for(var i = 0; i < fronts.length; ++i) {
+              fronts[i].style.animationPlayState = "running";
+            }
+          });
+        }, 2000);
+      });
+    </script>
+  </body>
 </html>
