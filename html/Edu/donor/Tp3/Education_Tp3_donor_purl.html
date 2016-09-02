@@ -32,6 +32,7 @@
       }
       
       .front {
+        display: none;
         transform: perspective(600px) rotateY(-180deg);
         backface-visibility: hidden;
         animation-name: flipfront;
@@ -123,6 +124,10 @@
       window.addEventListener("load", function() {
         backs = document.querySelectorAll(".back");
         fronts = document.querySelectorAll(".front");
+        
+        for(var i = 0; i < fronts.length; ++i) {
+          fronts[i].style.display = "inline";
+        }
         
         setTimeout(function() {
           requestAnimationFrame(function() {
