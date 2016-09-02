@@ -34,6 +34,7 @@
       .front {
         display: none;
         transform: perspective(600px) rotateY(-180deg);
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         animation-name: flipfront;
         animation-timing-function: linear;
@@ -43,6 +44,7 @@
       }
       
       .back {
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         animation-name: flipback;
         animation-timing-function: linear;
