@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RayFinton</title>
+    <title>##firstname##</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/loadthedice.com/js/bootstrap-3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/loadthedice.com/css/global.css">
@@ -131,15 +131,13 @@
         }
         
         setTimeout(function() {
-          requestAnimationFrame(function() {
-            for(var i = 0; i < backs.length; ++i) {
-              backs[i].style.animationPlayState = "running";
-            }
-            
-            for(var i = 0; i < fronts.length; ++i) {
-              fronts[i].style.animationPlayState = "running";
-            }
-          });
+          for(var i = 0; i < backs.length; ++i) {
+            backs[i].style.animationPlayState = "running";
+          }
+
+          for(var i = 0; i < fronts.length; ++i) {
+            fronts[i].style.animationPlayState = "running";
+          }
         }, 2000);
       });
     </script>
