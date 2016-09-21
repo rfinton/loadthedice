@@ -100,7 +100,7 @@ option {
 }
 
 
-@media all and (max-width:768px) and (orientation:landscape) {
+@media all and (max-width:1024px) and (orientation:landscape) {
     body {
         background: black url('../images/casino_card_background.jpg');
         background-size: auto 100%;
