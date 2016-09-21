@@ -33,7 +33,7 @@
       }
       
       .card img:first {
-        visibility: hidden;
+        opacity: 0;
       }
       
       .front {
@@ -130,9 +130,7 @@
     <script>
       
       function flipCard(card) {
-        //card.firstElementChild.style.animationPlayState = "running";
-        //card.lastElementChild.style.animationPlayState = "running";
-        card.firstElementChild.style.visibility = "visible";
+        card.firstElementChild.style.opacity = 1;
         card.firstElementChild.setAttribute("class", "front");
         card.lastElementChild.setAttribute("class", "back");
       }
