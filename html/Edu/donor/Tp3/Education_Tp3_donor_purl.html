@@ -32,8 +32,11 @@
         position: absolute;
       }
       
+      .card img:first-of-type {
+        opacity: 0;
+      }
+      
       .front {
-        display: none;
         transform: perspective(600px) rotateY(-180deg);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -41,7 +44,6 @@
         animation-timing-function: linear;
         animation-duration: 1s;
         animation-fill-mode: forwards;
-        animation-play-state: paused;
       }
       
       .back {
@@ -51,7 +53,6 @@
         animation-timing-function: linear;
         animation-duration: 1s;
         animation-fill-mode: forwards;
-        animation-play-state: paused;
       }
       
       #p2 {
@@ -70,28 +71,28 @@
             
             <div class="card-container">
               <div class="card">
-                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AC.png" />
-                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/AC.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
 
               <div class="card">
-                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AH.png" />
-                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/AH.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
 
               <div class="card">
-                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AD.png" />
-                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/AD.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
 
               <div class="card">
-                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/KC.png" />
-                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/KC.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
 
               <div class="card">
-                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/KH.png" />
-                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/KH.png" />
+                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
             </div>
 
@@ -125,24 +126,21 @@
     </div>
     
     <script>
+      function flipCard(card) {
+        card.firstElementChild.style.opacity = 1;
+        card.firstElementChild.setAttribute("class", "front");
+        card.lastElementChild.setAttribute("class", "back");
+      }
+      
       window.addEventListener("load", function() {
         
         cards = document.querySelectorAll(".card");
-        
-        for(var i = 0; i < 5; ++i) {
-          cards[i].firstElementChild.style.display = "inline";
-        }
-        
-        function flipCard(card) {
-          card.firstElementChild.style.animationPlayState = "running";
-          card.lastElementChild.style.animationPlayState = "running";
-        }
-        
+          
         setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
-        setTimeout(function(){ flipCard(cards.item(1)); }, 2100);
-        setTimeout(function(){ flipCard(cards.item(2)); }, 2200);
-        setTimeout(function(){ flipCard(cards.item(3)); }, 2300);
-        setTimeout(function(){ flipCard(cards.item(4)); }, 2400);
+        setTimeout(function(){ flipCard(cards.item(1)); }, 2300);
+        setTimeout(function(){ flipCard(cards.item(2)); }, 2600);
+        setTimeout(function(){ flipCard(cards.item(3)); }, 2900);
+        setTimeout(function(){ flipCard(cards.item(4)); }, 3200);
       });
     </script>
   </body>

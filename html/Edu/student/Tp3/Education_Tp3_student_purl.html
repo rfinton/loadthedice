@@ -37,7 +37,6 @@
       }
       
       .front {
-        /*display: none;*/
         transform: perspective(600px) rotateY(-180deg);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -45,7 +44,6 @@
         animation-timing-function: linear;
         animation-duration: 3s;
         animation-fill-mode: forwards;
-        /*animation-play-state: paused;*/
       }
       
       .back {
@@ -55,7 +53,6 @@
         animation-timing-function: linear;
         animation-duration: 3s;
         animation-fill-mode: forwards;
-        /*animation-play-state: paused;*/
       }
       
       #p2 {
@@ -128,7 +125,6 @@
     </div>
     
     <script>
-      
       function flipCard(card) {
         card.firstElementChild.style.opacity = 1;
         card.firstElementChild.setAttribute("class", "front");
@@ -138,15 +134,12 @@
       window.addEventListener("load", function() {
         
         cards = document.querySelectorAll(".card");
-        
-        
+          
         setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
         setTimeout(function(){ flipCard(cards.item(1)); }, 2300);
         setTimeout(function(){ flipCard(cards.item(2)); }, 2600);
         setTimeout(function(){ flipCard(cards.item(3)); }, 2900);
         setTimeout(function(){ flipCard(cards.item(4)); }, 3200);
-        
-        
       });
     </script>
   </body>
