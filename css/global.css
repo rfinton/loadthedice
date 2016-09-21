@@ -1,5 +1,5 @@
 body {
-    background: black url('https://rfinton.github.io/Advertisers/images/bg2.jpg');
+    background: black url('../images/bg2.jpg');
     background-size: auto 100%;
     background-position: top left;
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@ option {
         background-color: black;
     }
     .container-fluid {
-        background: black url('http://rfinton.github.io/Advertisers/images/bg2.jpg');
+        background: black url('../images/bg2.jpg');
         background-size: auto 100%;
         background-position: top left;
         background-repeat: no-repeat;
@@ -102,7 +102,7 @@ option {
         background-color: black;
     }
     .container-fluid {
-        background: black url('http://rfinton.github.io/Advertisers/images/bg2.jpg');
+        background: black url('../images/bg2.jpg');
         background-size: auto 100%;
         background-position: top left;
         background-repeat: no-repeat;
@@ -127,7 +127,7 @@ option {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 /* IE10+ CSS styles go here */
     body {
-        background: black url('http://rfinton.github.io/Advertisers/images/bg.gif');
+        background: black url('../images/bg.gif');
         background-size: auto 100%;
         background-position: top left;
         background-repeat: no-repeat;
