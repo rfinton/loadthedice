@@ -49,31 +49,19 @@
       .front {
         -webkit-transform: perspective(600px) rotateY(-180deg);
         -webkit-backface-visibility: hidden;
-        -webkit-animation-name: flipfront;
-        -webkit-animation-timing-function: linear;
-        -webkit-animation-duration: 3s;
-        -webkit-animation-fill-mode: forwards;
+        -webkit-animation: flipfront 3s 1;
         
         transform: perspective(600px) rotateY(-180deg);
         backface-visibility: hidden;
-        animation-name: flipfront;
-        animation-timing-function: linear;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
+        animation: flipfront 3s 1;
       }
       
       .back {
         -webkit-backface-visibility: hidden;
-        -webkit-animation-name: flipback;
-        -webkit-animation-timing-function: linear;
-        -webkit-animation-duration: 3s;
-        -webkit-animation-fill-mode: forwards;
+        -webkit-animation: flipback 3s 1;
         
         backface-visibility: hidden;
-        animation-name: flipback;
-        animation-timing-function: linear;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
+        animation: flipback 3s 1;
       }
       
       #p2 {
