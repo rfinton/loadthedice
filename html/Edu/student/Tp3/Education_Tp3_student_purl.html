@@ -123,20 +123,21 @@
       </div>
     </div>
     
-     <script>
+    <script>
+      
+     function flipCard(card) {
+        requestAnimationFrame(function() {
+          card.firstElementChild.style.animationPlayState = "running";
+          card.lastElementChild.style.animationPlayState = "running";
+        });
+      }
+      
       window.addEventListener("load", function() {
         
         cards = document.querySelectorAll(".card");
         
         for(var i = 0; i < 5; ++i) {
           cards[i].firstElementChild.style.display = "inline";
-        }
-        
-        function flipCard(card) {
-          requestAnimationFrame(function() {
-            card.firstElementChild.style.animationPlayState = "running";
-            card.lastElementChild.style.animationPlayState = "running";
-          });
         }
         
         setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
