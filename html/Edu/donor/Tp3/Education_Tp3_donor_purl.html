@@ -7,6 +7,16 @@
           href="https://s3.amazonaws.com/loadthedice.com/js/bootstrap-3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/loadthedice.com/css/global.css" />
     <style>
+      @-webkit-keyframes flipback {
+        0% { -webkit-transform: perspective(600px) rotateY(0deg); }
+        100% { -webkit-transform: perspective(600px) rotateY(180deg); }
+      }
+      
+      @-webkit-keyframes flipfront {
+        0% { -webkit-transform: perspective(600px) rotateY(-180deg); }
+        100% { -webkit-transform: perspective(600px) rotateY(0deg); }
+      }
+      
       @keyframes flipback {
         0% { transform: perspective(600px) rotateY(0deg); }
         100% { transform: perspective(600px) rotateY(180deg); }
@@ -37,8 +47,14 @@
       }
       
       .front {
-        transform: perspective(600px) rotateY(-180deg);
+        -webkit-transform: perspective(600px) rotateY(-180deg);
         -webkit-backface-visibility: hidden;
+        -webkit-animation-name: flipfront;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+        
+        transform: perspective(600px) rotateY(-180deg);
         backface-visibility: hidden;
         animation-name: flipfront;
         animation-timing-function: linear;
@@ -48,6 +64,11 @@
       
       .back {
         -webkit-backface-visibility: hidden;
+        -webkit-animation-name: flipback;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+        
         backface-visibility: hidden;
         animation-name: flipback;
         animation-timing-function: linear;
