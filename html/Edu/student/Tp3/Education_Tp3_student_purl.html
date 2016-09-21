@@ -132,6 +132,7 @@
       function flipCard(card) {
         //card.firstElementChild.style.animationPlayState = "running";
         //card.lastElementChild.style.animationPlayState = "running";
+        card.firstElementChild.style.visibility = "visible";
         card.firstElementChild.setAttribute("class", "front");
         card.lastElementChild.setAttribute("class", "back");
       }
@@ -139,10 +140,6 @@
       window.addEventListener("load", function() {
         
         cards = document.querySelectorAll(".card");
-        
-        for(var i = 0; i < 5; ++i) {
-          cards[i].firstElementChild.style.visibility = "visible";
-        }
         
         setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
         setTimeout(function(){ flipCard(cards.item(1)); }, 2300);
