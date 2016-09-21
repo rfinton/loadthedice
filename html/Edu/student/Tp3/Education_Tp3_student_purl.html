@@ -32,6 +32,10 @@
         position: absolute;
       }
       
+      .card:first-child {
+        visibility: hidden;
+      }
+      
       .front {
         /*display: none;*/
         transform: perspective(600px) rotateY(-180deg);
@@ -137,7 +141,7 @@
         cards = document.querySelectorAll(".card");
         
         for(var i = 0; i < 5; ++i) {
-          cards[i].firstElementChild.style.display = "inline";
+          cards[i].firstElementChild.style.visibility = "visible";
         }
         
         setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
