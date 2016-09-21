@@ -41,7 +41,7 @@
         animation-timing-function: linear;
         animation-duration: 0.8s;
         animation-fill-mode: forwards;
-        animation-play-state: paused;
+        /*animation-play-state: paused;*/
       }
       
       .back {
@@ -51,7 +51,7 @@
         animation-timing-function: linear;
         animation-duration: 0.8s;
         animation-fill-mode: forwards;
-        animation-play-state: paused;
+        /*animation-play-state: paused;*/
       }
       
       #p2 {
@@ -127,7 +127,7 @@
       
      function flipCard(card) {
         requestAnimationFrame(function() {
-          //card.firstElementChild.style.animationPlayState = "running";
+          card.firstElementChild.style.animationPlayState = "running";
           card.lastElementChild.style.animationPlayState = "running";
         });
       }
@@ -140,8 +140,8 @@
           cards[i].firstElementChild.style.display = "inline";
         }
         
-        setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
-        setTimeout(function(){ flipCard(cards.item(1)); }, 3000);
+        //setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
+        //setTimeout(function(){ flipCard(cards.item(1)); }, 3000);
         //setTimeout(function(){ flipCard(cards.item(2)); }, 4000);
         //setTimeout(function(){ flipCard(cards.item(3)); }, 5000);
         //setTimeout(function(){ flipCard(cards.item(4)); }, 6000);
