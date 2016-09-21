@@ -99,7 +99,9 @@ option {
         line-height: 14pt;
     }
 }
-@media all and (max-width:736px) and (orientation:landscape) {
+
+
+@media all and (max-width:768px) and (orientation:landscape) {
     body {
         background-color: black;
     }
