@@ -153,7 +153,7 @@
         card.lastElementChild.setAttribute("class", "back");
       }
       
-      window.addEventListener("load", function() {
+      window.onload = function() {
         
         cards = document.querySelectorAll(".card");
           
@@ -162,7 +162,7 @@
         setTimeout(function(){ flipCard(cards.item(2)); }, 2600);
         setTimeout(function(){ flipCard(cards.item(3)); }, 2900);
         setTimeout(function(){ flipCard(cards.item(4)); }, 3200);
-      });
+      };
     </script>
   </body>
 </html>
