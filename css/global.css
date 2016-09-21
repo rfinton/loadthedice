@@ -1,7 +1,7 @@
 body {
-    background: black url('../images/bg2.jpg');
+    background: black url('../images/casino_card_background.jpg');
     background-size: auto 100%;
-    background-position: top left;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #ffffff;
@@ -76,9 +76,9 @@ option {
         background-color: black;
     }
     .container-fluid {
-        background: black url('../images/bg2.jpg');
+        background: black url('../images/casino_card_background.jpg');
         background-size: auto 100%;
-        background-position: top left;
+        background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
         color: #ffffff;
@@ -102,9 +102,9 @@ option {
         background-color: black;
     }
     .container-fluid {
-        background: black url('../images/bg2.jpg');
+        background: black url('../images/casino_card_background.jpg');
         background-size: auto 100%;
-        background-position: top left;
+        background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
         color: #ffffff;
@@ -127,9 +127,9 @@ option {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 /* IE10+ CSS styles go here */
     body {
-        background: black url('../images/bg.gif');
+        background: black url('../images/casino_card_background.jpg');
         background-size: auto 100%;
-        background-position: top left;
+        background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
