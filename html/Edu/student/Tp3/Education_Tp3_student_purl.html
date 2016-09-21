@@ -125,11 +125,11 @@
     
     <script>
       
-     function flipCard(card) {
-        requestAnimationFrame(function() {
-          card.firstElementChild.style.animationPlayState = "running";
-          card.lastElementChild.style.animationPlayState = "running";
-        });
+      function flipCard(card) {
+        //card.firstElementChild.style.animationPlayState = "running";
+        //card.lastElementChild.style.animationPlayState = "running";
+        card.firstElementChild.setAttribute("class", "front");
+        card.lastElementChild.setAttribute("class", "back");
       }
       
       window.addEventListener("load", function() {
@@ -140,7 +140,7 @@
           cards[i].firstElementChild.style.display = "inline";
         }
         
-        //setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
+        setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
         //setTimeout(function(){ flipCard(cards.item(1)); }, 3000);
         //setTimeout(function(){ flipCard(cards.item(2)); }, 4000);
         //setTimeout(function(){ flipCard(cards.item(3)); }, 5000);
