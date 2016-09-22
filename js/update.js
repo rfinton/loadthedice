@@ -21,10 +21,10 @@ define(["jquery"], function($){
                     $('.modal-title').html('Profile Updated!');
 
                     if( $('#client_type').html() == 'prospect' ){
-                        $('.pop-msg').html('Thanks for keeping us up-to-date.<br>Check your email for your free download link and instructions on redeeming your chips for a $50.00 Amazon gift card.');
+                        $('.pop-msg').html('Thanks for keeping us up-to-date.<br>Check your email for your free download link. Thank you for participating. <br><i>Note: If you do not see it in your in-box then check your spam folder.</i>');
                     }
                     else {
-                        $('.pop-msg').html('Thanks for keeping us up-to-date.<br>Check your email for your free download link. You are now in the running for the Amazon Echo giveaway. Good luck!');
+                        $('.pop-msg').html('Thanks for keeping us up-to-date.<br>Check your email for your free download link. <br><i>Note: If you do not see it in your in-box then check your spam folder.</i>');
                     }
 
                 }).fail(function(){
