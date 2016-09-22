@@ -1,0 +1,126 @@
+#Donor_text_1
+{
+##firstname##,<br>Did you know that 57% of Donors attained each year will not give again?
+}
+
+#Donor_text_2
+{
+<p id='p2'>Answer 2 questions to receive a case study on how to load the dice and cash-in with more donors. You can also receive a $50 Amazon gift card when you meet with our fundraising expert to receive a FREE strategic concept based on ##company## objectives.</p>
+}
+
+#Donor_text_3
+{
+##firstname##, thanks for your feedback. Let us show you how to increase your odds and win more donors. Confirm your information and cash in your chips to receive the case study and details on how to redeem your $50 Amazon gift card.
+}
+
+#Donor_text_4
+{
+<h1>Welcome Back ##firstname##</h1>
+<p>Did you know that 57% of Donors attained each year will not give again?<br>
+<br>
+Get personal with your donors. Play your hand and increase funds by utilizing personalization in ##company## marketing materials. Download the article "Power of Personalization" and 3 definitive ways to retain donors and increase engagement and enter to win a free 3 month Donor Marketing
+Campaign.
+}
+
+#Donor_survey_home
+{
+<p>Find out how to use advanced personalization, crosschannel integration and data optimization  techniques to improve retention.</p>
+
+<form role="form" id="survey1" class="form1" method="post">
+  <div class="form-group">
+    <label class="h4 strong" for="question_3">Do you use personalization in your direct marketing today?</label>
+    <textarea class="form-control" id="question_3" name="question_3"></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label class="h4 strong" for="question_4">What increase in engagement would you like see in 2017?</label>
+    <textarea class="form-control" id="question_4" name="question_4"></textarea>
+  </div>
+  
+  <div class="form-group submit">
+    <input id="submitBtn" type="submit" value="Load the Dice">
+  </div>
+</form>
+}
+
+#Donor_survey_welcmbk
+{
+
+}
+
+#Donor_downloads
+{
+<button class="btn btn-danger" id="tp3-article">Download Article</button>
+<button class="btn btn-danger" id="tp3-caseStudy">Download Case Study</button>
+}
+
+#Donor_thankYouEmail_html
+{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8" content="width=600px, initial-scale=1.0" name="viewport" />
+  <style type="text/css">
+    td.body, td.footer { 
+      padding: 15px; 
+    }
+    p, span, a {
+      font-family: trebuchet ms, helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+<center>
+<table style="width:600px;" width="600">
+  <tbody>
+    <tr>
+      <td class="header"><img alt="banner_img" src="https://s3.amazonaws.com/loadthedice.com/images/diceEmailHeader.jpg" /></td>
+    </tr>
+    <tr>
+      <td class="body">
+        <p>##firstname##,<br />
+          <br />
+          Thanks for taking the time to answer questions. Here are the links to the article and case study. I hope those give you some ideas on how to make an impact with your direct marketing and WIN new donors! You are now in the drawing for  a free 3-month marketing campaign.
+        </p>
+
+        <a href="http://##purl##.winmoredonors.com/tp3_article.html">Download Article</a><br>
+        <a href="http://##purl##.winmoredonors.com/tp3_caseStudy.html">Download Case Study</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="footer">
+      <p>Regards,</p>
+
+      <span>##rep_name##<br />
+      Advertisers Printing Company Inc.<br />
+      1229 S. Vandeventer Ave.<br />
+      St. Louis, MO 63110<br />
+      <br />
+      Click here to <a href="##Unsubscribe RedirectURL='http://studio.m.mdl.io/unsubscribe' ##">unsubscribe</a>.</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</body>
+</html>
+}
+
+#Donor_thankYouEmail_plain
+{
+##firstname##,
+  
+Thanks for taking the time to answer questions. Here are the links to the article and case study. I hope those give you some ideas on how to make an impact with your direct marketing and WIN new donors! You are now in the drawing for  a free 3-month marketing campaign.
+
+http://##purl##.winmoredonors.com/tp3_article.html
+http://##purl##.winmoredonors.com/tp3_caseStudy.html
+
+Regards,
+##rep_name##
+Advertisers Printing Company
+1229 S. Vandeventer Ave.
+St. Louis, MO 63110
+
+To unsubscribe, visit ##Unsubscribe RedirectURL="http://www.yourdomain.com"##
+}
