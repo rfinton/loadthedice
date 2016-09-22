@@ -7,16 +7,6 @@
           href="https://s3.amazonaws.com/loadthedice.com/js/bootstrap-3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/loadthedice.com/css/global.css" />
     <style>
-      @keyframes flipback {
-        0% { transform: perspective(600px) rotateY(0deg); }
-        100% { transform: perspective(600px) rotateY(180deg); }
-      }
-      
-      @keyframes flipfront {
-        0% { transform: perspective(600px) rotateY(-180deg); }
-        100% { transform: perspective(600px) rotateY(0deg); }
-      }
-      
       .card-container {
         padding: 0 5%;
       }
@@ -30,29 +20,26 @@
       .card img {
         width: 100%;
         position: absolute;
-      }
-      
-      .card img:first-of-type {
-        opacity: 0;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
       }
       
       .front {
-        transform: perspective(600px) rotateY(-180deg);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        animation-name: flipfront;
-        animation-timing-function: linear;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
+        -webkit-transform: perspective(600px) rotateY(-90deg);
+        -webkit-transition: all 1s;
+        -webkit-transition-delay: 1s;
+        
+        transform: perspective(600px) rotateY(-90deg);
+        transition: all 1s;
+        transition-delay: 1s;
       }
       
       .back {
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        animation-name: flipback;
-        animation-timing-function: linear;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
+        -webkit-transform: perspective(600px) rotateY(0deg);
+        -webkit-transition: all 1s;
+        
+        transform: perspective(600px) rotateY(0deg);
+        transition: all 1s;
       }
       
       #p2 {
@@ -71,28 +58,28 @@
             
             <div class="card-container">
               <div class="card">
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/AC.png" />
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AC.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
 
               <div class="card">
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/AH.png" />
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AH.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
 
               <div class="card">
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/AD.png" />
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AD.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
 
               <div class="card">
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/KC.png" />
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/KC.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
 
               <div class="card">
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/KH.png" />
-                <img class="" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/KH.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
               </div>
             </div>
 
@@ -113,12 +100,11 @@
     
     <script>
       function flipCard(card) {
-        card.firstElementChild.style.opacity = 1;
-        card.firstElementChild.setAttribute("class", "front");
-        card.lastElementChild.setAttribute("class", "back");
+        card.firstElementChild.style.transform = "rotateY(0deg)";
+        card.lastElementChild.style.transform = "rotateY(90deg)";
       }
       
-      window.addEventListener("load", function() {
+      window.onload = function() {
         
         cards = document.querySelectorAll(".card");
           
@@ -127,7 +113,7 @@
         setTimeout(function(){ flipCard(cards.item(2)); }, 2600);
         setTimeout(function(){ flipCard(cards.item(3)); }, 2900);
         setTimeout(function(){ flipCard(cards.item(4)); }, 3200);
-      });
+      };
     </script>
   </body>
 </html>
