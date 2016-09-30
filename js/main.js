@@ -1,11 +1,11 @@
 require.config({
     baseUrl: "../js",
     paths: {
-        jquery: "https://s3.amazonaws.com/loadthedice.com/js/jquery-1.12.0.min",
-        bootstrap: "https://s3.amazonaws.com/loadthedice.com/js/bootstrap-3.3.6/js/bootstrap.min",
-        update: "https://s3.amazonaws.com/loadthedice.com/js/update",
-        add: "https://s3.amazonaws.com/loadthedice.com/js/add",
-        check: "https://s3.amazonaws.com/loadthedice.com/js/check"
+        jquery: "http://s3.amazonaws.com/loadthedice.com/js/jquery-1.12.0.min",
+        bootstrap: "http://s3.amazonaws.com/loadthedice.com/js/bootstrap-3.3.6/js/bootstrap.min",
+        update: "http://s3.amazonaws.com/loadthedice.com/js/update",
+        add: "http://s3.amazonaws.com/loadthedice.com/js/add",
+        check: "http://s3.amazonaws.com/loadthedice.com/js/check"
     },
     shim: {
         'bootstrap': { 'deps': ['jquery'] }

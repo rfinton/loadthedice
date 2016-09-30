@@ -1,5 +1,5 @@
 body {
-    background: black url('http://rfinton.github.io/Advertisers/images/bg2.jpg');
+    background: black url('https://s3.amazonaws.com/loadthedice.com/images/bg2.jpg');
     background-size: auto 100%;
     background-position: top left;
     background-repeat: no-repeat;
@@ -71,38 +71,14 @@ option {
 .logo img {
     margin-top: 5%;
 }
+
+
 @media all and (min-width:320px) and (orientation:portrait) {
     body {
         background-color: black;
     }
     .container-fluid {
-        background: black url('http://rfinton.github.io/Advertisers/images/bg2.jpg');
-        background-size: auto 100%;
-        background-position: top left;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        color: #ffffff;
-        font-family: sans-serif;
-    }
-    .h4 {
-        font-size: 14pt;
-    }
-    p {
-        margin: 0%;
-        padding: 3%;
-        font-size: 14pt;
-        font-weight: bolder;
-    }
-    .strong {
-        line-height: 14pt;
-    }
-}
-@media all and (max-width:736px) and (orientation:landscape) {
-    body {
-        background-color: black;
-    }
-    .container-fluid {
-        background: black url('http://rfinton.github.io/Advertisers/images/bg2.jpg');
+        background: black url('https://s3.amazonaws.com/loadthedice.com/images/bg2.jpg');
         background-size: auto 100%;
         background-position: top left;
         background-repeat: no-repeat;
@@ -124,10 +100,39 @@ option {
     }
 }
 
+
+@media all and (max-width:736px) and (orientation:landscape) {
+    body {
+        background-color: black;
+    }
+    .container-fluid {
+        background: black url('https://s3.amazonaws.com/loadthedice.com/images/bg2.jpg');
+        background-size: auto 100%;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #ffffff;
+        font-family: sans-serif;
+    }
+    .h4 {
+        font-size: 14pt;
+    }
+    p {
+        margin: 0%;
+        padding: 3%;
+        font-size: 14pt;
+        font-weight: bolder;
+    }
+    .strong {
+        line-height: 14pt;
+    }
+}
+
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 /* IE10+ CSS styles go here */
     body {
-        background: black url('http://rfinton.github.io/Advertisers/images/bg.gif');
+        background: black url('https://s3.amazonaws.com/loadthedice.com/images/bg.gif');
         background-size: auto 100%;
         background-position: top left;
         background-repeat: no-repeat;

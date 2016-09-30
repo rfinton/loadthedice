@@ -23,8 +23,11 @@ define(["jquery"], function($){
                     if( $('#client_type').html() == 'prospect' ){
                         $('.pop-msg').html('Thanks for keeping us up-to-date.<br>Check your email for your free download link and instructions on redeeming your chips for a $50.00 Amazon gift card.');
                     }
-                    else {
+                    else if( $('#client_type').html() == 'current' ){
                         $('.pop-msg').html('Thanks for keeping us up-to-date.<br>Check your email for your free download link. You are now in the running for the Amazon Echo giveaway. Good luck!');
+                    }
+                    else{
+                      $('.pop-msg').html('Thanks for keeping us up-to-date.<br>Check your email for your free download link and instructions on redeeming your chips for a $50.00 Amazon gift card.');
                     }
 
                 }).fail(function(){
@@ -36,7 +39,7 @@ define(["jquery"], function($){
             
             $('#updateProfile').click(function(){
                 $('.modal-title').html('Updating Profile...');
-                $('.pop-msg').html("<img src='https://s3.amazonaws.com/loadthedice.com/images/pop-msg.gif'>");
+                $('.pop-msg').html("<img src='http://s3.amazonaws.com/loadthedice.com/images/progress.gif'>");
             });
         });
     };

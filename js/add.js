@@ -25,7 +25,7 @@ define(["jquery"], function($){
         
         $('#referFriend button').click(function(){
             $('.modal-title').html('Saving...');
-            $('.pop-msg').html("<img src='https://s3.amazonaws.com/loadthedice.com/images/progress.gif'>");
+            $('.pop-msg').html("<img src='http://s3.amazonaws.com/loadthedice.com/images/progress.gif'>");
         });
     };
 });
