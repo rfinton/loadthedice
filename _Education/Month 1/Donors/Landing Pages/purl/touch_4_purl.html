@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>##firstname## ##lastname##</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" 
+          href="https://s3.amazonaws.com/loadthedice.com/js/bootstrap-3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/loadthedice.com/css/global.css" />
+    <style>
+      .card-container {
+        padding: 0 5%;
+      }
+      
+      .card {
+        width: 18%;
+        display: inline-block;
+        position: relative;
+      }
+      
+      .card img {
+        width: 100%;
+        position: absolute;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+      }
+      
+      .front {
+        -webkit-transform: perspective(600px) rotateY(-90deg);
+        -webkit-transition: all 1s;
+        -webkit-transition-delay: 1s;
+        
+        transform: perspective(600px) rotateY(-90deg);
+        transition: all 1s;
+        transition-delay: 1s;
+      }
+      
+      .back {
+        -webkit-transform: perspective(600px) rotateY(0deg);
+        -webkit-transition: all 1s;
+        
+        transform: perspective(600px) rotateY(0deg);
+        transition: all 1s;
+      }
+      
+      #p2 {
+        margin-top: 23%;
+      }
+    </style>
+    <script data-main="https://s3.amazonaws.com/loadthedice.com/js/main" type="text/javascript" 
+            src="https://s3.amazonaws.com/loadthedice.com/js/require-2.1.22.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8 col-xs-12">
+          <div class="leftcol">
+            
+            <p>##firstname##,<br>
+            
+            For education institutions, product visibility and brand consistency is important. A versatile online brand management tool can increase donor loyalty and generate interest in your products. Play your hand to win and build up your brand!
+            
+            </p>
+
+            <div class="card-container">
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AC.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+              </div>
+
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AH.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+              </div>
+
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/AD.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+              </div>
+
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/KC.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+              </div>
+
+              <div class="card">
+                <img class="front" src="https://s3.amazonaws.com/loadthedice.com/images/KH.png" />
+                <img class="back" src="https://s3.amazonaws.com/loadthedice.com/images/cardBack.png" />
+              </div>
+            </div>
+            
+            
+            <p id='p2'>
+            
+            Just answer a couple of questions and we'll show you the benefits our brand management system can offer. Your donors will see the amazing convenience of ordering ##company##'s products through an easy user interface.
+              
+            </p>
+            
+            
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-12">
+          <form role="form" id="survey1" class="form1" method="post">
+  <div class="form-group">
+    <label class="h4 strong" for="question_5">Do you currently have an online brand management tool?</label>
+    <textarea class="form-control" id="question_5" name="question_5"></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label class="h4 strong" for="question_6">Do you sell product direct, through dealers or both?</label>
+    <textarea class="form-control" id="question_6" name="question_6"></textarea>
+  </div>
+  
+  <div class="form-group submit">
+    <input id="submitBtn" type="submit" value="Play Your Hand">
+  </div>
+</form>
+        </div>
+
+        <div class="logo">
+          <img id="logo" src="https://s3.amazonaws.com/loadthedice.com/images/apcLogo.png" alt="apc-logo" />
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function flipCard(card) {
+        card.firstElementChild.style.transform = "rotateY(0deg)";
+        card.lastElementChild.style.transform = "rotateY(90deg)";
+        
+        card.firstElementChild.style.webkitTransform = "rotateY(0deg)";
+        card.lastElementChild.style.webkitTransform = "rotateY(90deg)";
+      }
+      
+      window.onload = function() {
+        
+        cards = document.querySelectorAll(".card");
+          
+        setTimeout(function(){ flipCard(cards.item(0)); }, 2000);
+        setTimeout(function(){ flipCard(cards.item(1)); }, 2300);
+        setTimeout(function(){ flipCard(cards.item(2)); }, 2600);
+        setTimeout(function(){ flipCard(cards.item(3)); }, 2900);
+        setTimeout(function(){ flipCard(cards.item(4)); }, 3200);
+      };
+    </script>
+  </body>
+</html>
