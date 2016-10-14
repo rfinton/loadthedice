@@ -20,6 +20,9 @@ define(["jquery"], function($){
 
                     $('.modal-title').html('Profile Updated!');
 
+                    $('.pop-msg').html("Thanks for keeping us up-to-date.<br>Check your email for your free download link. Note: if you don't see it in you're inbox then check your spam folder.");
+                  
+                    /*
                     if( $('#client_type').html() == 'prospect' ){
                         $('.pop-msg').html('Thanks for keeping us up-to-date.<br>Check your email for your free download link and instructions on redeeming your chips for a $50.00 Amazon gift card.');
                     }
@@ -29,6 +32,7 @@ define(["jquery"], function($){
                     else{
                       $('.pop-msg').html('Thanks for keeping us up-to-date.<br>Check your email for your free download link and instructions on redeeming your chips for a $50.00 Amazon gift card.');
                     }
+                    */
 
                 }).fail(function(){
 
